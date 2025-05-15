@@ -152,7 +152,7 @@
 
 **メモ**
 - San Franciscoは `-apple-system` と書かないと反映されない
-- 配色の微差（真っ黒 vs ダークグレー）で印象が変わるのが面白い
+- [📱 San Franciscoフォントについて](STUDY_MEMO.md#-san-franciscoフォントをcssで使いたいときの注意メモ)
 
 <br>
 
