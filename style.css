@@ -1,35 +1,40 @@
 body {
-    background-color: #222;
-    font-family: 'San Francisco', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
+    background-color: #000;/*iPhone画面からカラーピッカーで抽出*/
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;/*iOS標準フォント（San Francisco）を指定、以前はHelvetica NeueがiOS標準フォント*/
+    display: flex;/*子要素（ .calculator）を フレックスボックス（横並び or 縦並び）で扱う*/
+    justify-content: center;/*子要素を 水平方向の中央に配置*/
+    margin-top: 10vh;/*画面の高さの10%*/
   }
   
   .calculator {
     width: 100%;/*iPhone の電卓のように画面いっぱいにしたい */
     max-width: 400px;  /* 最大幅を400pxにする 、１５proでも３９３px*/
     margin: 0 auto; /* 中央配置、左右に余白をつけない */      
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
+    background-color: rgb(1, 0,0); /* iosUIのデフォルトの背景色 */
+    padding: 20px;/*外枠と中身の余白*/
+    border-radius: 10px;/*実際のiPhone電卓アプリも、本体にうっすら角丸があるらしい？*/
+    color: rgb(254, 254, 254); /* 文字の色 */
+
+
   }
   
+  /* 画面の表示部分 */
   #display {
-    height: 100px;
-    color: #fff;
-    font-size: 2em;
-    text-align: right;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    height: 100px; /* 画面の高さ */
+    font-size: 2.5em; /* 文字の大きさ */
+    text-align: right; /* 文字の位置右寄せ */
+    padding: 10px; /* 内側の余白 */
+    margin-bottom: 10px; /* 下側の余白 */
   }
+
+  /* ボタンの配置 */
   .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4等分 */
-    gap: 10px;
+    gap: 10px; /* ボタンの間隔 */
   }
   
+  /* ボタンの共通スタイル */
   .number-button, .operator-button, .function-button {
     /* gpt-4oが割り出したPC画面を想定した最適px */
     width: 80px;
@@ -43,10 +48,11 @@ body {
   
   /* スマホサイズ（〜４００pxくらい）だけvwに切り替える */
 @media (max-width: 400px) {
+  /* gpt-4oが導き出したiPhone画面を想定した数値、したボタンの幅の35〜40%くらい */
   .number-button, .operator-button, .function-button {
-    width: 22vw;
-    height: 22vw;
-    font-size: 8vw;/* ボタンの幅の35〜40%くらい */
+    width: 22vw;　/*ボタン一つの幅*/
+    height: 22vw;　/*ボタン一つの高さ*/
+    font-size: 8vw;　/*ボタン一つの文字の大きさ*/
   }
 }
 
