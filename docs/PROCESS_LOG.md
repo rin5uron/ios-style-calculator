@@ -2,18 +2,31 @@
 
 ---
 
-## 第一開発フェーズ
+## 🌱第１開発フェーズ
 
 | 項目         | 内容                                           |
 |--------------|------------------------------------------------|
-| 完成URL      | （未設定）                                     |
+| 完成URL      |   **https://ios-style-calculator-phase1.vercel.app/**                                   |
 | 実装範囲     | 基本UIの設計、四則演算、画面表示、AC機能の実装 |
 | 開発期間     | 2025/04/27〜29、2025/05/15〜 |
+
+### 完成画像比較
+左：実際のiPhone電卓アプリ / 右：作成したiOSクローン電卓アプリ
+
+<div style="display: flex; justify-content: center; gap: 10px; align-items: flex-start;">
+  <img src="images/phase1/iPhone_calculator.jpg" style="height: 400px; width: auto;" alt="iPhone電卓比較">
+  <img src="images/phase1/phase1.jpg" style="height: 400px; width: auto;" alt="制作アプリ">
+</div>
 
 <br>
 
 ---
+### 🌿　第２開発フェーズに向けて
+- [第2フェーズの予定](#第2フェーズ予定よりios電卓に近づける改修)
 
+<br>
+<br>
+<br>
 ## プロセス①｜2025/04/27
 
 ### 実装内容
@@ -81,7 +94,9 @@
 <br>
 
 ### 参考画像
-![JavaScript実装](practice/5_application/250427_caluculator/images/js1.png)
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="images/phase1/js1.png" width="200" alt="JavaScript実装">
+</div>
 
 <br>
 
@@ -98,7 +113,7 @@
 ### 実装内容
 - CSSデザイン実装
   - ボタン配置（Gridレイアウト）
-  - `vw` を使ったレスポンシブ設計
+  - `vw` `vh`を使ったレスポンシブ設計
 
 <br>
 
@@ -110,7 +125,7 @@
 | メディアクエリの理解 | `@media (max-width: 400px)` を使いスマホ用レイアウトを調整           |
 
 **メモ**
-- モバイル対応には`vw`, `vh`が便利
+- モバイル対応には割合で高さや幅を指定できる`vw`, `vh`が便利
 - クラス名は機能ベースで命名した方が管理しやすい
 - CSSクラス名の付け方
  - 役割でクラス名をつけると、あとから管理が超ラクになる
@@ -122,11 +137,6 @@
 
 <br>
 
-### 参考画像
-![CSS設計](practice/5_application/250427_caluculator/images/js1.png)
-
-<br>
-
 ### 次のステップ
 - カラー・フォントの調整
 - 見た目の細部を整える
@@ -135,7 +145,7 @@
 
 ---
 
-## プロセス④｜2025/05/15
+## プロセス④｜2025/05/15,/18
 
 ### 実装内容
 - CSSデザイン最終調整（カラー / フォント）
@@ -149,15 +159,36 @@
 | iOSの黒の使い分け      | 背景：`#000` / 本体：`#1C1C1E` で立体感を出す                         |
 | San Franciscoフォント | `-apple-system` で指定。直接名前では指定できない                     |
 | レスポンシブ対応       | `vw` や `@media` で画面幅による調整を柔軟に実現                       |
+| フレックスの3点セット  | `display: flex; justify-content: center; align-items: center;` で中央揃え |
+| `flex-end` の活用     | `justify-content: flex-end; align-items: flex-end;` で右下に要素を配置  |
+| `rem`と`vw`の使い分け | PCなど広い画面では `rem`、スマホなど画面幅に依存したい時は `vw` を使用  |
 
 **メモ**
 - San Franciscoは `-apple-system` と書かないと反映されない
-- [📱 San Franciscoフォントについて](STUDY_MEMO.md#-san-franciscoフォントをcssで使いたいときの注意メモ)
+  - [📱 San Franciscoフォントについて](STUDY_MEMO.md#テーマsan-franciscoフォントをcssで使いたいとき)
+- `flex-end` は「終点（end）に寄せる」という意味。縦方向なら下、横方向なら右。
+  - [`flex-end`の詳しい使い方](STUDY_MEMO.md#テーマdisplay-flex-align-items--justify-content-の3点セットの役割と電卓ディスプレイでの使い方)
+- `rem` は root（html）の文字サイズに比例。`1rem = 16px`（ブラウザ初期値）なので可読性・拡張性が高い。
+- `vw` は「ビューポートの幅」の百分率。`10vw` は画面幅の10%。スマホの画面に合わせて自動調整されるので便利。
+  - [`rem`と`vw`の詳しい使い分け](STUDY_MEMO.md#テーマrem-と-vw-の使い分け電卓アプリの実装例から)
 
+### 参考画像
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="images/phase1/css1.png" width="200" alt="CSS実装1">
+  <img src="images/phase1/css2.png" width="200" alt="CSS実装2">
+  <img src="images/phase1/css3.png" width="200" alt="CSS実装3">
+</div>
 <br>
 
-### 次のステップ
-- `=`ボタン処理の強化
-- 機能追加（パーセント、履歴など）
+## 🌿 第2フェーズ予定（よりiOS電卓に近づける改修）
 
----
+### ⚫︎ よりiOSデザインに寄せたCSSの実装
+- ± 記号の位置ズレを修正  
+- ボタンのフォントサイズ・太さの微調整  
+- 背景色・オレンジボタンの色味をiOS実機と比較して近づける  
+
+### ⚫︎ JavaScriptの実装予定
+- [ ] ACボタンを削除ボタンに切り替え（入力有無で表示切り替え）
+- [ ] パーセント計算機能の追加（100×20% → 20）
+- [ ] クリア機能（現在の入力や表示のみを消す）
+- [ ] 計算式をディスプレイにリアルタイム表示（例：3+4×2 など）

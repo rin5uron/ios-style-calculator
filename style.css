@@ -1,6 +1,7 @@
 body {
     background-color: #000;/*iPhone画面からカラーピッカーで抽出*/
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;/*iOS標準フォント（San Francisco）を指定、以前はHelvetica NeueがiOS標準フォント*/
+    /*iOS標準フォント（San Francisco）を指定、以前はHelvetica NeueがiOS標準フォント*/
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
     display: flex;/*子要素（ .calculator）を フレックスボックス（横並び or 縦並び）で扱う*/
     justify-content: center;/*子要素を 水平方向の中央に配置*/
     margin-top: 10vh;/*画面の高さの10%*/
@@ -14,8 +15,6 @@ body {
     padding: 20px;/*外枠と中身の余白*/
     border-radius: 20px;/*実際のiPhone電卓アプリも、本体にうっすら角丸があるらしい？*/
     color: rgb(254, 254, 254); /* 文字の色 */
-
-
   }
   
   /* 画面の表示部分 */

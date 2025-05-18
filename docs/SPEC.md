@@ -1,8 +1,8 @@
-# 仕様書｜iOS電卓クローンアプリ
+# 仕様書｜iOS Calculator Clone
 
 ## 1. アプリ名（仮）
 - iOS Calculator Clone
-- スマートフォン向けレスポンシブ電卓アプリ
+- スマートフォン対応レスポンシブ電卓アプリ
 
 ---
 
@@ -43,7 +43,7 @@
 | 項目 | 内容 |
 |------|------|
 | エディタ | Cursor / VS Code |
-| 確認端末 | iPhone 15 Pro / MacBook |
+| 確認端末 | iPhone 16 / MacBook |
 | 公開環境 | Vercel |
 | 使用フォント | `-apple-system`（San Francisco 系） |
 
@@ -92,4 +92,4 @@ ios-style-calculator/
 ---
 
 ## 最終更新
-2025/05/15
+2025/05/18
