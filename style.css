@@ -12,7 +12,7 @@ body {
     margin: 0 auto; /* 中央配置、左右に余白をつけない */      
     background-color: rgb(1, 0,0); /* iosUIのデフォルトの背景色 */
     padding: 20px;/*外枠と中身の余白*/
-    border-radius: 10px;/*実際のiPhone電卓アプリも、本体にうっすら角丸があるらしい？*/
+    border-radius: 20px;/*実際のiPhone電卓アプリも、本体にうっすら角丸があるらしい？*/
     color: rgb(254, 254, 254); /* 文字の色 */
 
 
@@ -21,10 +21,14 @@ body {
   /* 画面の表示部分 */
   #display {
     height: 100px; /* 画面の高さ */
-    font-size: 2.5em; /* 文字の大きさ */
+    font-size: 5rem; /* 文字の大きさ */
     text-align: right; /* 文字の位置右寄せ */
-    padding: 10px; /* 内側の余白 */
+    padding: 10px 20px; /* 内側の余白 */
     margin-bottom: 10px; /* 下側の余白 */
+    /* 以下3点セットでディスプレイの文字をきっかり右下に揃える */
+    display: flex;
+    align-items: flex-end;/*縦方向、上下の終点右下揃え*/
+    justify-content: flex-end;/*横方向、左右の終点*/
   }
 
   /* ボタンの配置 */
@@ -39,7 +43,11 @@ body {
     /* gpt-4oが割り出したPC画面を想定した最適px */
     width: 80px;
     height: 80px;
-    font-size: 28px;
+    font-size: 2.5vw;
+    font-weight: 500; /* 文字が細く見えるので太く */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     aspect-ratio: 1 / 1; /* ←正方形にする！ */
     border: none;
