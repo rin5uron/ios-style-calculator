@@ -179,6 +179,9 @@
   <img src="images/phase1/css3.png" width="200" alt="CSS実装3">
 </div>
 <br>
+<br>
+<br>
+<br>
 
 ## 🌿 第2フェーズ予定（よりiOS電卓に近づける改修）
 
