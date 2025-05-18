@@ -43,8 +43,8 @@ body {
     /* gpt-4oが割り出したPC画面を想定した最適px */
     width: 80px;
     height: 80px;
-    font-size: 2.5vw;
-    font-weight: 500; /* 文字が細く見えるので太く */
+    font-size: 2rem; /* remで安定したフォントサイズに */
+    font-weight: 400;  /* 少し太めに */ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,13 +58,19 @@ body {
 @media (max-width: 400px) {
   /* gpt-4oが導き出したiPhone画面を想定した数値、したボタンの幅の35〜40%くらい */
   .number-button, .operator-button, .function-button {
-    width: 22vw;　/*ボタン一つの幅*/
-    height: 22vw;　/*ボタン一つの高さ*/
-    font-size: 8vw;　/*ボタン一つの文字の大きさ*/
+    width: 21vw;/*ボタン一つの幅*/
+    height: 21vw;/*ボタン一つの高さ*/
+    aspect-ratio: 1 / 1; /*画面サイズが変わっても正円になるように*/
+    font-size: 9vw;/*ボタン一つの文字の大きさ*/
+    display: flex;            /* ← 中央揃えにするために必要 */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
   }
-}
-
-  
+  .buttons {
+  gap: 8px;                 /* ← ボタン同士の隙間が大きいと潰れるので調整 */
+  }
+}  
   .function-button {
     background: rgb(92,92,95);
     color: rgb(255, 255, 255);
@@ -78,5 +84,7 @@ body {
   .operator-button {
     background: rgb(242, 163, 60);
     color: rgb(255, 255, 255);
+    font-size: 3rem;/*オレンジボタンのフォントだけ大きく見える*/
+    font-weight: 300;
   }
-  
+
